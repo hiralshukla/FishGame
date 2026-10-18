@@ -16,20 +16,7 @@ public class SpawnFish : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
-        fishTankHeight = GetFishTankHeight();
-        for (int i = 0; i < fishTankHeight; i++)
-        {
-            float calcHeight = fishTankHeight - i;
-            availableSpaces.Add((calcHeight-fishTankHeight/2) - tankDistance);
-
-        }
-
-        print(availableSpaces.Count);
-
-        PlaceFish();
-        PlaceFish();
-        PlaceFish();
+        InitAvailableSpaces(5);
     }
 
     float GetFishTankHeight() => tankBackground.localScale.y;
@@ -41,6 +28,25 @@ public class SpawnFish : MonoBehaviour
         availableSpaces.RemoveAt(randomNumber);
         GameObject tempFish = Instantiate(fishy, position, Quaternion.identity);
         tempFish.GetComponent<BaseFish>().speed = Random.Range(1f, 2f);
+    }
+
+
+    public void InitAvailableSpaces(int currCapacity)
+    {
+        fishTankHeight = GetFishTankHeight();
+        for (int i = 0; i < fishTankHeight; i++)
+        {
+            float calcHeight = fishTankHeight - i;
+            availableSpaces.Add((calcHeight - fishTankHeight / 2) - tankDistance);
+
+        }
+
+        print(availableSpaces.Count);
+
+        for (int i = 0; i < currCapacity; i++)
+        {
+            PlaceFish();
+        }
     }
 
 }

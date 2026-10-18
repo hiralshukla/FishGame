@@ -5,7 +5,6 @@ using UnityEngine;
 public class BaseFish : MonoBehaviour
 {
     public Transform bubbleTransform;
-    public Transform tankBackground;
     public SpriteRenderer fishy;
 
     public float speed = 1f;
@@ -26,8 +25,9 @@ public class BaseFish : MonoBehaviour
         transform.position += Vector3.right * direction * speed * Time.deltaTime;
 
         float fishHalfSize = transform.localScale.x/2 + turnDistance;
-        float leftEdge = -tankBackground.localScale.x/2 + fishHalfSize;
-        float rightEdge = tankBackground.localScale.x/2 - fishHalfSize;
+        float tankWidth = FishTank.Instance.GetBackgroundLength();
+        float leftEdge = -tankWidth/2 + fishHalfSize;
+        float rightEdge = tankWidth/2 - fishHalfSize;
 
         if ((transform.position.x > rightEdge && direction > 0) || (transform.position.x < leftEdge && direction < 0))
         {
