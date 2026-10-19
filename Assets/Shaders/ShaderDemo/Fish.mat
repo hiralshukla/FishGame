@@ -29,7 +29,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseTex:
-        m_Texture: {fileID: 2800000, guid: 29d4143cc04c0ac449af1f9be2ffaad6, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6f84730233575a54aaf7d4cdb47f10c0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -63,13 +63,16 @@ Material:
     m_Ints: []
     m_Floats:
     - _EnableExternalAlpha: 0
+    - _NoiseIntensity: 0.04
+    - _NoiseScale: 1.5
+    - _NoiseSpeed: 2
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ZWrite: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color1: {r: 0.3301887, g: 0.28042218, b: 0.1791118, a: 0.14117648}
-    - _Color2: {r: 0.5234058, g: 0.62264144, b: 0.4141153, a: 0.3529412}
+    - _Color1: {r: 0, g: 0, b: 0, a: 0.14117648}
+    - _Color2: {r: 1, g: 1, b: 1, a: 0.3529412}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
