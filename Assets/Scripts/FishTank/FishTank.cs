@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class FishTank : MonoBehaviour
@@ -7,9 +8,12 @@ public class FishTank : MonoBehaviour
     public Transform tankBackground;
     public SpawnFish spawner;
 
+
+    public List <BaseFish> currFishList= new();
+
     public static FishTank Instance;
 
-    void Awake()
+    void Awake() // singleton 
     {
         if (FishTank.Instance == null) FishTank.Instance = this;
         else Destroy(this);
@@ -19,15 +23,19 @@ public class FishTank : MonoBehaviour
     int GetCurrCapacity() => currCapacity;
     int GetMaxCapacity() => maxCapacity;
 
-    void SetCurrCapacity(int newCapacity)
+
+    public void SetCurrCapacity(int newCapacity)
     {
-        currCapacity = newCapacity;
+        if (maxCapacity! > newCapacity)
+        {
+            currCapacity = newCapacity;
+        }
     }
 
-    void SetMaxCapacity(int newCapacity)
+    public void SetMaxCapacity(int newCapacity)
     {
         maxCapacity = newCapacity;
-
+        tankBackground.localScale *= 2;
         spawner.InitAvailableSpaces(newCapacity);
     }
 
@@ -35,7 +43,5 @@ public class FishTank : MonoBehaviour
     {
         return tankBackground.localScale.x;
     }
-
-
 
 }

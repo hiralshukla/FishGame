@@ -2524,7 +2524,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BaseFish
   bubbleTransform: {fileID: 5014396709854268412}
-  tankBackground: {fileID: 0}
   fishy: {fileID: 2476943089864105264}
   speed: 1
   turnDistance: 0.05

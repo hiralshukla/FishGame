@@ -21,13 +21,16 @@ public class SpawnFish : MonoBehaviour
 
     float GetFishTankHeight() => tankBackground.localScale.y;
     void PlaceFish()
-    { 
+    {
         Vector2 position = Vector2.zero;
-        int randomNumber = Random.Range(0, availableSpaces.Count-1);
+        int randomNumber = Random.Range(0, availableSpaces.Count - 1);
         position.y = availableSpaces[randomNumber];
         availableSpaces.RemoveAt(randomNumber);
         GameObject tempFish = Instantiate(fishy, position, Quaternion.identity);
-        tempFish.GetComponent<BaseFish>().speed = Random.Range(1f, 2f);
+        BaseFish tempFishComponent = tempFish.GetComponent<BaseFish>();
+        tempFishComponent.speed = Random.Range(1f, 2f);
+        FishTank.Instance.currFishList.Add(tempFishComponent);
+
     }
 
 
