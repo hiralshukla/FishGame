@@ -1,5 +1,3 @@
-using JetBrains.Annotations;
-using Unity.Collections;
 using UnityEngine;
 
 public class BaseFish : MonoBehaviour
@@ -7,11 +5,20 @@ public class BaseFish : MonoBehaviour
     public Transform bubbleTransform;
     public SpriteRenderer fishy;
 
+    public FishData data;
+
     public float speed = 1f;
     public float turnDistance = 0.05f;
 
     private int direction = 1;
     private float bubbleXOffset;
+
+    public void Init(FishData input)
+    {
+        data = input;
+        speed = data.speed;
+    }
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
