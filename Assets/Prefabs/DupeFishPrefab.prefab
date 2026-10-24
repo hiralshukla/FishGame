@@ -2525,8 +2525,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BaseFish
   bubbleTransform: {fileID: 5014396709854268412}
   fishy: {fileID: 2476943089864105264}
+  ps: {fileID: 2682697822803442479}
   speed: 1
   turnDistance: 0.05
+  turnSpeed: 0.025
 --- !u!1 &1706840450089500497
 GameObject:
   m_ObjectHideFlags: 0

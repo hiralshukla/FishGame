@@ -6,17 +6,25 @@ public class BaseFish : MonoBehaviour
 {
     public Transform bubbleTransform;
     public SpriteRenderer fishy;
+    public ParticleSystem ps;
 
     public float speed = 1f;
     public float turnDistance = 0.05f;
+    public float turnSpeed = 0.05f;
 
     private int direction = 1;
     private float bubbleXOffset;
+
+    private Quaternion targetSR_Rot;
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
         bubbleXOffset = bubbleTransform.localPosition.x;
+        targetSR_Rot = Quaternion.identity;
+
+        if (FishTank.Instance.bubblePopCol != null) ps.trigger.AddCollider(FishTank.Instance.bubblePopCol);
     }
 
 
@@ -37,11 +45,14 @@ public class BaseFish : MonoBehaviour
 
 
             direction = direction * -1;
-            float srRot = (direction > 0) ? 0 : 180;
-
-            Transform childSR = fishy.transform;
-            childSR.rotation = Quaternion.Euler(0, srRot, 0);
         }
 
+        if ((transform.position.x > (rightEdge * 0.95f) && direction > 0) || (transform.position.x < (leftEdge * 0.95f) && direction < 0))
+        {
+            float srRot = (-direction > 0) ? 0 : 180;
+            targetSR_Rot = Quaternion.Euler(0, srRot, 0);
+        }
+
+        fishy.transform.rotation = Quaternion.Lerp(fishy.transform.rotation, targetSR_Rot, turnSpeed);
     }
 }
