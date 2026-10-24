@@ -243,8 +243,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1784667484}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &818401844
-BoxCollider2D:
+--- !u!60 &818401844
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -287,8 +287,19 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.008738071, y: -0.048567295}
+      - {x: -0.50925165, y: -0.060112685}
+      - {x: -0.5127657, y: -5.392024}
+      - {x: -0.42730254, y: -5.391554}
+      - {x: -0.4160768, y: -0.5819442}
+      - {x: -0.0025765374, y: -0.54954624}
+      - {x: 0.42649153, y: -0.48693037}
+      - {x: 0.42170778, y: -5.427828}
+      - {x: 0.5039598, y: -5.433321}
+      - {x: 0.49763644, y: -0.07971984}
+  m_UseDelaunayMesh: 1
 --- !u!1 &1388798194
 GameObject:
   m_ObjectHideFlags: 0
@@ -473,7 +484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41ff0a6f5b7653146b90fdf6ab03aaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnFish
-  fishy: {fileID: 873645651473575664, guid: e6094373ab2bc0f43b4938bd7a2caaa8, type: 3}
+  fishy: {fileID: 873645651473575664, guid: 8df6286f24126d746960bbc91abaf3e4, type: 3}
   tankBackground: {fileID: 118775413}
   tankDistance: 0.5
 --- !u!114 &1784667486
@@ -491,6 +502,8 @@ MonoBehaviour:
   maxCapacity: 5
   tankBackground: {fileID: 118775413}
   spawner: {fileID: 1784667485}
+  bubblePopCol: {fileID: 818401844}
+  currFishList: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

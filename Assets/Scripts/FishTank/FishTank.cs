@@ -7,6 +7,7 @@ public class FishTank : MonoBehaviour
     public int maxCapacity = 5;
     public Transform tankBackground;
     public SpawnFish spawner;
+    public Collider2D bubblePopCol;
 
 
     public List <BaseFish> currFishList= new();
