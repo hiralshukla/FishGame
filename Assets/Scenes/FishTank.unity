@@ -473,7 +473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41ff0a6f5b7653146b90fdf6ab03aaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnFish
-  fishy: {fileID: 873645651473575664, guid: e6094373ab2bc0f43b4938bd7a2caaa8, type: 3}
+  fishy: {fileID: 873645651473575664, guid: 8df6286f24126d746960bbc91abaf3e4, type: 3}
   tankBackground: {fileID: 118775413}
   tankDistance: 0.5
 --- !u!114 &1784667486
@@ -491,6 +491,7 @@ MonoBehaviour:
   maxCapacity: 5
   tankBackground: {fileID: 118775413}
   spawner: {fileID: 1784667485}
+  currFishList: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

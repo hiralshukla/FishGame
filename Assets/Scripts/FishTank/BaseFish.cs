@@ -37,7 +37,10 @@ public class BaseFish : MonoBehaviour
 
 
             direction = direction * -1;
-            fishy.flipX = !fishy.flipX;
+            float srRot = (direction > 0) ? 0 : 180;
+
+            Transform childSR = fishy.transform;
+            childSR.rotation = Quaternion.Euler(0, srRot, 0);
         }
 
     }
