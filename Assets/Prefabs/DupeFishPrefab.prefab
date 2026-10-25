@@ -2526,6 +2526,7 @@ MonoBehaviour:
   bubbleTransform: {fileID: 5014396709854268412}
   fishy: {fileID: 2476943089864105264}
   ps: {fileID: 2682697822803442479}
+  data: {fileID: 0}
   speed: 1
   turnDistance: 0.05
   turnSpeed: 0.025
@@ -2610,12 +2611,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 6f84730233575a54aaf7d4cdb47f10c0, type: 3}
+  m_Sprite: {fileID: 2896300046742791534, guid: 6f84730233575a54aaf7d4cdb47f10c0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.75, y: 0.3125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

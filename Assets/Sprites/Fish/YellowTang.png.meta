@@ -3,8 +3,8 @@ guid: 6f84730233575a54aaf7d4cdb47f10c0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8720924389040627404
-    second: demoFish 1_0
+      213: 2896300046742791534
+    second: yellowTang_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,14 +46,14 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationMethod: 0
@@ -115,10 +115,10 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: demoFish 1_0
+      name: yellowTang_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 4
         y: 3
         width: 24
         height: 10
@@ -130,8 +130,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cce9ec1c682f60970800000000000000
-      internalID: 8720924389040627404
+      spriteID: e652d091c89b13820800000000000000
+      internalID: 2896300046742791534
       vertices: []
       indices: 
       edges: []
@@ -140,7 +140,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -150,7 +150,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      demoFish 1_0: 8720924389040627404
+      yellowTang_0: 2896300046742791534
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
