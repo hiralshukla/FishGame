@@ -1,5 +1,7 @@
 using UnityEngine;
 
+
+// scriptable object 
 [CreateAssetMenu(fileName = "FishData", menuName = "Scriptable Objects/FishData")]
 public class FishData : ScriptableObject
 {
