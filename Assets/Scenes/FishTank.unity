@@ -520,7 +520,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ae585a7475e8e42b767529cac82354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  ownedItems: []
 --- !u!4 &1414104374
 Transform:
   m_ObjectHideFlags: 0
