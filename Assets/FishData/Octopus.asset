@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4585190a4eac87242a02fe8aa306e94d, type: 3}
   m_Name: Octopus
   m_EditorClassIdentifier: Assembly-CSharp::FishData
-  speed: 1
+  speed: 0.8
   rarity: 0.5
   <sprite>k__BackingField: {fileID: 21300000, guid: 14e1789477c93274fb5a9b9aac52f53d, type: 3}
+  colorOptions: []
   personality: 

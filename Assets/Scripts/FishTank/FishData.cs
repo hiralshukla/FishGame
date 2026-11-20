@@ -9,6 +9,7 @@ public class FishData : ScriptableObject
     public float rarity = 0.50f;
     [field: SerializeField]
     public Sprite sprite { get; private set; }
+    public FishColorWay[] colorOptions;
     public string itemName => name;
     public string personality;
 }

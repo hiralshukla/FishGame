@@ -63,4 +63,12 @@ public class BaseFish : MonoBehaviour
 
         fishy.transform.rotation = Quaternion.Lerp(fishy.transform.rotation, targetSR_Rot, turnSpeed);
     }
+
+
+    public void SetColors(Color r, Color g, Color b)
+    {
+        fishy.material.SetColor("_Color1_R", r);
+        fishy.material.SetColor("_Color2_G", g);
+        fishy.material.SetColor("_Color3_B", b);
+    }
 }

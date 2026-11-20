@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4585190a4eac87242a02fe8aa306e94d, type: 3}
   m_Name: LemonSharkBaby
   m_EditorClassIdentifier: Assembly-CSharp::FishData
-  speed: 1
+  speed: 1.65
   rarity: 0.5
   <sprite>k__BackingField: {fileID: 21300000, guid: 6b61b23fbba8d9e4993daa8dda36957d, type: 3}
+  colorOptions: []
   personality: 
