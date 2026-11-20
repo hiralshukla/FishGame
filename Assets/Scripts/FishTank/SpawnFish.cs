@@ -35,7 +35,7 @@ public class SpawnFish : MonoBehaviour
         if (ifInteract)
         {
             FishData newFishData = FishGenerator.Instance.OnSuccess(1f);
-            SpawnFishFromData(newFishData);
+            SpawnFishRandomColor(newFishData);
         }
     }
 
@@ -43,7 +43,7 @@ public class SpawnFish : MonoBehaviour
 
     float GetFishTankHeight() => tankBackground.localScale.y;
 
-    void PlaceFish(FishData newFishData)
+    BaseFish PlaceFish(FishData newFishData)
     {
         Vector2 position = Vector2.zero;
         int randomNumber = Random.Range(0, availableSpaces.Count - 1);
@@ -57,6 +57,8 @@ public class SpawnFish : MonoBehaviour
         BaseFish tempFishComponent = tempFish.GetComponent<BaseFish>();
         tempFishComponent.Init(newFishData);
         FishTank.Instance.currFishList.Add(tempFishComponent);
+
+        return tempFishComponent;
     }
 
 
@@ -74,6 +76,14 @@ public class SpawnFish : MonoBehaviour
     public void SpawnFishFromData(FishData newFishData)
     {
         if (availableSpaces.Count <= 0) return;
-        PlaceFish(newFishData);
+        BaseFish tmpFish = PlaceFish(newFishData);
+        
+    }
+
+    public void SpawnFishRandomColor(FishData newFishData)
+    {
+        if (availableSpaces.Count <= 0) return;
+        BaseFish tmpFish = PlaceFish(newFishData);
+        tmpFish.SetColors(Random.ColorHSV(), Random.ColorHSV(), Random.ColorHSV());
     }
 }

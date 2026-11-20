@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4585190a4eac87242a02fe8aa306e94d, type: 3}
   m_Name: Starfish
   m_EditorClassIdentifier: Assembly-CSharp::FishData
-  speed: 1
+  speed: 0.1
   rarity: 0.5
   <sprite>k__BackingField: {fileID: 21300000, guid: e7379a226157145479719297a82dc748, type: 3}
+  colorOptions: []
   personality: 
